@@ -1,0 +1,1 @@
+# Diario_Pessoal_Criptografado
