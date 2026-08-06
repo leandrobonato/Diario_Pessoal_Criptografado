@@ -1,0 +1,7 @@
+# Dependências de execução do Diário Pessoal Criptografado
+# Instalação: pip install -r requirements.txt
+
+cryptography>=43.0        # AES-256-GCM (AEAD) e Scrypt (KDF memory-hard)
+streamlit>=1.40           # interface web do diário
+supabase>=2.9             # cliente oficial: Auth (GoTrue) + PostgREST
+python-dotenv>=1.0        # leitura do .env (nenhuma chave no código)

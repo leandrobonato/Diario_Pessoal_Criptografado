@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diario-pessoal-criptografado"
+version = "1.0.0"
+description = "Diário pessoal com criptografia ponta a ponta e isolamento por usuário via Row Level Security no Supabase/PostgreSQL"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Leandro Miozzo Bonato" }]
+keywords = ["supabase", "postgresql", "row-level-security", "rls", "aes-gcm", "streamlit"]
+
+dependencies = [
+    "cryptography>=43.0",
+    "streamlit>=1.40",
+    "supabase>=2.9",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
